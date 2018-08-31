@@ -1,0 +1,16 @@
+{
+  "name": "react-node-starter-app",
+  "version": "1.0.0",
+  "description": "starter code for react/node full-stack app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "author": "Nishant M.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "nodemon": "^1.18.4"
+  }
+}
