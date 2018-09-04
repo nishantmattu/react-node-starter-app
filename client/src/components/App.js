@@ -5,10 +5,10 @@ class App extends Component {
 
 	
 
-	componentDidMount() {
-	fetch('/api/')
-      .then(res => console.log(res.json()))
-      .then(user => console.log(user));
+	async componentDidMount() {
+	const res = await axios.get('/api/');
+	console.log(res);
+      
 	}
 
 	render() {

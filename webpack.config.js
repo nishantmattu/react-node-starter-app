@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //creates our index ht
 
 
 module.exports = {
-	entry: './client/src/index.js',
+	entry: ['@babel/polyfill', './client/src/index.js'],
 	output: {
 		path: path.join(__dirname, '/dist'),
 		filename: 'bundle.js'
