@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //creates our index ht
 
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './client/src/index.js',
 	output: {
 		path: path.join(__dirname, '/dist'),
 		filename: 'bundle.js'
@@ -22,9 +22,16 @@ module.exports = {
 			}
 		]
 	},
+	 devServer: {
+	 	port: 3000,
+   		open: true,
+   		proxy: {
+	      '/api': 'http://localhost:5001'
+	    }
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './public/index.html'
+			template: './client/public/index.html'
 		})
 	]
 
